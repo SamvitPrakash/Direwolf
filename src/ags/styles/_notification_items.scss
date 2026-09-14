@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.notification-item-container {
+    background-color: rgba(map.get(colors.$themes, light, secondary),0.1);
+    border: 1px solid rgba(map.get(colors.$themes, light, secondary),0.65);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.notification-toasts-container {
+    margin: 10px;
+}
+
+.notification-toast-item-container {
+    background-color: map.get(colors.$themes, light, background);
+    border: 1px solid map.get(colors.$themes, light, secondary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.notification-item-icon {
+    border-radius: 22px;
+}
+
+.notification-item-title {
+    color: map.get(colors.$themes, light, text);
+    font-weight: 550;
+	font-size: 17px;
+}
+
+.notification-item-summary {
+    color: map.get(colors.$themes, light, text);
+    font-weight: 550;
+    font-size: 13px;
+}
+
+.notification-item-body {
+    color: map.get(colors.$themes, light, text);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.notification-item-button {
+    color: map.get(colors.$themes, light, text);
+    background-color: map.get(colors.$themes, light, background);
+    border-radius: 22px;
+    padding: 0px;
+}
+
+.notification-toast-item-button {
+    color: map.get(colors.$themes, light, text);
+    background-color: map.get(colors.$themes, light, background);
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.notification-toast-item-button:hover {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.notification-item-button:hover {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.notification-item-revealer {
+    padding-top: 5px;
+
+}

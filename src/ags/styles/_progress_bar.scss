@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.progress-bar-default {
+    border-radius: 22px;
+    margin: 10px;
+    
+}
+
+.progress-bar-container {
+    background-color: rgba(map.get(colors.$themes, light, primary), 0.1);
+    padding: 0px;
+    margin: 0px;
+}
+
+.progress-bar-fill {
+    background-color: map.get(colors.$themes, light, secondary);
+    border-radius: 22px;
+    margin: 0px;
+    padding: 0px;
+}

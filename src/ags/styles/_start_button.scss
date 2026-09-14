@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use 'colors';
+
+.start-bar {
+    padding: 0px;
+    margin-right: 2.5px;
+    margin-left: 5px;
+}
+
+.start-button {
+    border-radius: 22px;
+    padding: 1.5px;
+}
+
+.start-icon {
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+}
+
+.start-icon:hover {
+    color: map.get(colors.$themes, light, background);
+    background-color: map.get(colors.$themes, light, secondary);
+
+}

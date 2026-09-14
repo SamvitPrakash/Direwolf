@@ -1,7 +1,0 @@
-@use "colors";
-@use "sass:map";
-
-.clock {
-	font-size: 15px;
-	color: map.get($map: colors.$backgrounds, $key: accent);
-}

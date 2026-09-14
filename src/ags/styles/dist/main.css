@@ -1,216 +1,672 @@
-@keyframes pulse {
-  0% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-  50% {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
+/*
+  Aylurs GTK Shell is not a browser therefore importing fonts through URL's is not possible. If you want to use a font, 
+  please download it and install it on your system. The font links are left below for reference only. You can also use
+  the font manager to install fonts on your system.
+*/
+.nandinagari {
+  font-family: "Noto Sans Nandinagari";
 }
-.tray-bar {
-  background-color: rgba(0, 3, 7, 0.6);
-  padding: 14px;
-  padding-bottom: 7px;
-  padding-top: 7px;
+
+.shadow {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.55);
   border-radius: 22px;
-  margin-top: 4px;
-  margin-right: 6px;
+  transition: transform 450ms ease, box-shadow 450ms ease;
 }
 
-.tray-battery-label {
-  color: rgb(248, 228, 134);
-  font-size: 11px;
-  font-weight: 500;
+.shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
 }
 
-.workspace-bar {
-  background-color: rgba(0, 3, 7, 0.6);
-  padding: 14px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+/*
+    The Intrinsic <menubutton /> element is a heirarchy of other widgets
+    including a <button /> element with deafult padding and margin. This
+    is a workaround to remove the padding and margin from the <button />
+    element so that the <menubutton /> can be styled properly with CSS.
+*/
+menubutton button {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-bar {
+  background-color: rgb(249, 240, 240);
   border-radius: 22px;
-  margin-top: 4px;
+  padding: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
-.workspace-bar-special {
-  border: rgb(248, 228, 134);
-  border-style: solid;
-  border-width: 1px;
+/* 
+How to use workspace styles:
+============================
+
+> Use button styles for active workspaces
+> Use label style for the current workspace
+*/
+.workspace-button-label {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 22px;
+  color: rgb(28, 13, 13);
 }
 
-.workspace-label {
-  color: rgb(248, 228, 134);
-  padding-right: 6px;
-  padding-left: 6px;
-  font-size: 15px;
+.workspace-button-label:hover {
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
+}
+
+.workspace-button-label-active {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 22px;
+  color: rgb(231, 126, 126);
+}
+
+.workspace-button-label-active:hover {
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
+}
+
+.workspace-button-label-current {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 22px;
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
 }
 
 .workspace-button {
-  color: rgb(248, 228, 134);
-  background-color: rgba(0, 0, 0, 0);
+  margin: 0px;
+  padding: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
   border-radius: 22px;
-  font-size: 12px;
-  padding: 6px;
+  background-color: rgb(249, 240, 240);
 }
 
 .workspace-button:hover {
-  color: white;
+  color: rgb(231, 126, 126);
 }
 
 .workspace-button-active {
-  background-color: rgba(255, 255, 255, 0.08);
-  animation: pulse 1s normal ease-in-out;
-  padding: 6px;
-  padding-right: 10px;
+  margin: 0px;
+  padding: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 22px;
+  color: rgb(191, 24, 24);
+}
+
+.workspace-button-active:hover {
+  color: rgb(231, 126, 126);
+}
+
+.workspace-button-active-start {
+  margin: 0px;
+  padding: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 22px;
+  color: rgb(191, 24, 24);
+  border-radius: 0px;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+}
+
+.workspace-button-active-start:hover {
+  color: rgb(231, 126, 126);
+}
+
+.workspace-button-active-center {
+  margin: 0px;
+  padding: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 22px;
+  color: rgb(191, 24, 24);
+  border-radius: 0px;
+}
+
+.workspace-button-active-center:hover {
+  color: rgb(231, 126, 126);
+}
+
+.workspace-button-active-end {
+  margin: 0px;
+  padding: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 22px;
+  color: rgb(191, 24, 24);
+  border-radius: 0px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+
+.workspace-button-active-end:hover {
+  color: rgb(231, 126, 126);
+}
+
+.media-pill {
+  padding-left: 6px;
+  padding-right: 8px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.media-control-button {
+  border-radius: 22px;
+  padding: 0px;
+}
+
+.media-album-cover {
+  border-radius: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-icon {
+  border-radius: 22px;
+  padding: 0px;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin: 0px;
+}
+
+.media-icon:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.media-label {
+  color: rgb(28, 13, 13);
+  border-radius: 22px;
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.media-label:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.media-pill-button {
+  border-radius: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.time-bar {
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.time-label {
+  color: rgb(28, 13, 13);
+  padding: 0px;
+  padding-left: 1px;
+  padding-right: 4px;
+}
+
+.messages-bar {
+  padding: 0px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.messages-button {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 22px;
+  padding: 1.5px;
+}
+
+.messages-icon {
+  border-radius: 22px;
+  padding: 0px;
   padding-left: 10px;
-  border-radius: 33px;
-}
-
-.media-bar {
-  background-color: rgba(0, 3, 7, 0.6);
-  padding: 14px;
-  padding-bottom: 7px;
-  padding-top: 7px;
-  border-radius: 22px;
-  margin-top: 4px;
-  margin-left: 6px;
-}
-
-.media-title {
-  color: rgb(248, 228, 134);
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 11px;
-  font-weight: 450;
-}
-
-.media-artist {
-  color: rgb(248, 228, 134);
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 11px;
-  font-weight: 400;
-}
-
-.media-card-control-box {
-  margin-top: 15px;
-}
-
-.media-button {
-  padding: 1px;
-  padding-left: 2px;
-  padding-right: 2px;
-  margin: 2px;
-  border-radius: 33px;
-}
-
-.media-info-button {
-  margin-right: 2px;
-  margin-right: 2px;
-  border-radius: 14px;
-  padding-left: 16px;
   padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 2px;
-  /* color: rgb(0, 0, 0, 0); */
 }
 
-/* .media-info-button:hover { */
-/* color: rgba(255, 255, 255, 0.65); */
-/* } */
-.cover-art {
-  margin-right: 10px;
+.messages-icon:hover {
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
 }
 
-.media-seperator {
-  color: rgb(248, 228, 134);
-}
-
-.media-card-box {
-  background-color: rgba(0, 3, 7, 0.95);
-  margin: 10px;
-  padding: 15px;
+.messages-icon-active {
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
   border-radius: 22px;
-  border-width: 0.4px;
-  border-color: rgb(248, 228, 134);
-  border-style: solid;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.media-card-cover-art {
-  margin-top: 0px;
+.messages-icon-alert {
+  animation: pulse 2s infinite;
 }
 
-.media-card-info-box {
-  margin-top: 20px;
-  margin-left: 10px;
+@keyframes pulse {
+  0% {
+    background-color: rgb(249, 240, 240);
+    color: rgb(28, 13, 13);
+  }
+  25% {
+    background-color: rgb(231, 126, 126);
+    color: rgb(249, 240, 240);
+  }
+  50% {
+    background-color: rgb(231, 126, 126);
+    color: rgb(249, 240, 240);
+  }
+  100% {
+    background-color: rgb(249, 240, 240);
+    color: rgb(28, 13, 13);
+  }
+}
+.start-bar {
+  padding: 0px;
+  margin-right: 2.5px;
+  margin-left: 5px;
 }
 
-.media-card-title {
-  color: rgb(248, 228, 134);
-  padding-right: 6px;
-  font-size: 16px;
-  font-weight: 450;
+.start-button {
+  border-radius: 22px;
+  padding: 1.5px;
 }
 
-.media-card-artist {
-  color: rgb(248, 228, 134);
-  padding-right: 6px;
-  font-size: 14px;
-  font-weight: 350;
-}
-
-.media-card-audio-visualizer {
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
-
-.media-button-large {
-  padding: 6px;
+.start-icon {
+  border-radius: 22px;
+  padding: 0px;
   padding-left: 6px;
   padding-right: 6px;
-  margin: 2px;
-  border-radius: 55px;
 }
 
-.clock {
-  font-size: 15px;
+.start-icon:hover {
+  color: rgb(249, 240, 240);
+  background-color: rgb(231, 126, 126);
 }
 
-.volume-modal-box {
-  background-color: rgba(0, 3, 7, 0.95);
-  border-radius: 15px;
-  margin: 15px;
-  border-width: 0.4px;
-  border-color: rgb(248, 228, 134);
-  border-style: solid;
+.system-tray-bar {
+  margin-left: 2.5px;
 }
 
-.volume-icon {
-  margin-left: 5px;
+.system-tray-menu {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*
+    The fields below are used to style the popup menu of the menubutton, these fields are
+    not used to style the menubutton itself, but rather the popup menu that appears when the
+    menubutton is clicked. These fields are used in the widgets that form the hierarchy of the
+    menubutton and there is no way to set styles to these widgets directly, therefore we have
+    to use the fields below to style the popup menu. These are all the currently known fields 
+    after hours of inspecting the windows and research. The empty fields are left here in order 
+    to refer to them in the future if needing to style the popup menu of a menubutton. 
+*/
+.system-tray-menu popover arrow {
+  background-color: rgb(249, 240, 240);
+}
+
+.system-tray-menu popover contents {
+  background-color: rgb(249, 240, 240);
+  font-family: "Noto Sans Nandinagari";
+  font-size: 12px;
+  font-weight: 550;
+  padding: 0px;
+  margin: 0px;
+}
+
+.system-tray-menu popover contents modelbutton {
+  color: rgb(28, 13, 13);
   margin-top: 2px;
   margin-bottom: 2px;
 }
 
-.volume-progress-box {
-  margin-left: 5px;
-  margin-right: 15px;
+.system-tray-menu popover contents modelbutton:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
-.progress-bar {
-  background-color: rgba(248, 228, 134, 0.2);
-  border-radius: 4px;
+.system-tray-menu popover contents separator {
+  opacity: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-card-toggle {
+  border-radius: 22px;
+  padding: 0px;
+}
+
+.media-card-toggle-box {
+  padding: 0px;
+}
+
+.media-card-toggle-icon {
+  border-radius: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-card-toggle-icon-active {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+  border-radius: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-card-toggle-icon-active:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.media-card-toggle-icon:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.media-card-box {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+.media-card-controls-box {
+  margin-top: 20px;
+}
+
+.media-card-album-cover {
+  border-radius: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-card-label-title {
+  color: rgb(28, 13, 13);
+  margin-top: 10px;
+  font-weight: 555;
+  font-size: 13px;
+}
+
+.media-card-label-artist {
+  color: rgb(28, 13, 13);
+  font-style: italic;
+}
+
+.media-card-control-button {
+  border-radius: 22px;
+  padding: 0px;
+}
+
+.media-card-icon {
+  border-radius: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.media-card-icon:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.media-players-modal {
+  background-color: rgb(249, 240, 240);
+  border-radius: 22px;
+}
+
+.media-players-modal-button {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0px;
+}
+
+.media-players-container {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.media-players-modal-icon {
+  border-radius: 22px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.media-players-modal-icon:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.progress-bar-default {
+  border-radius: 22px;
+  margin: 10px;
+}
+
+.progress-bar-container {
+  background-color: rgba(18, 18, 18, 0.1);
+  padding: 0px;
+  margin: 0px;
 }
 
 .progress-bar-fill {
-  background-color: rgb(248, 228, 134);
-  border-radius: 4px;
+  background-color: rgb(231, 126, 126);
+  border-radius: 22px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.volume-modal-box {
+  background-color: rgb(249, 240, 240);
+  border-radius: 22px;
+  margin: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.volume-label {
+  color: rgb(28, 13, 13);
+  font-weight: 800;
+}
+
+.notifications-box {
+  background-color: rgb(249, 240, 240);
+  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.notification-header {
+  border-radius: 22px;
+  margin-bottom: 20px;
+  margin-right: 2px;
+}
+
+.notification-title {
+  color: rgb(18, 18, 18);
+  font-weight: 550;
+  font-size: 18px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+}
+
+.notification-icon {
+  border-radius: 11px;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.notification-icon:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.notification-icon-active {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.notification-do-not-disturb {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+  border-radius: 11px;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.notification-items-container {
+  color: rgb(249, 240, 240);
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.notification-empty-label {
+  color: rgba(28, 13, 13, 0.5);
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+}
+
+.notification-item-container {
+  background-color: rgba(231, 126, 126, 0.1);
+  border: 1px solid rgba(231, 126, 126, 0.65);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.notification-toasts-container {
+  margin: 10px;
+}
+
+.notification-toast-item-container {
+  background-color: rgb(249, 240, 240);
+  border: 1px solid rgb(231, 126, 126);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.notification-item-icon {
+  border-radius: 22px;
+}
+
+.notification-item-title {
+  color: rgb(28, 13, 13);
+  font-weight: 550;
+  font-size: 17px;
+}
+
+.notification-item-summary {
+  color: rgb(28, 13, 13);
+  font-weight: 550;
+  font-size: 13px;
+}
+
+.notification-item-body {
+  color: rgb(28, 13, 13);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.notification-item-button {
+  color: rgb(28, 13, 13);
+  background-color: rgb(249, 240, 240);
+  border-radius: 22px;
+  padding: 0px;
+}
+
+.notification-toast-item-button {
+  color: rgb(28, 13, 13);
+  background-color: rgb(249, 240, 240);
+  border-radius: 22px;
+  padding: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.notification-toast-item-button:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.notification-item-button:hover {
+  background-color: rgb(231, 126, 126);
+  color: rgb(249, 240, 240);
+}
+
+.notification-item-revealer {
+  padding-top: 5px;
+}
+
+.small {
+  font-size: 0.75rem;
+  font-weight: 550;
+  /* 12px */
+}
+
+.p {
+  font-weight: 500;
+  font-size: 100%;
+  /* 16px */
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 4.21rem;
+  /* 67.36px */
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+.h4 {
+  font-weight: 700;
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+.h5 {
+  font-weight: 700;
+  font-size: 1.333rem;
+  /* 21.28px */
 }
 
 .icon {
-  color: rgb(248, 228, 134);
-  padding: 5px;
+  color: rgb(28, 13, 13);
 }
 
 /*# sourceMappingURL=main.css.map */

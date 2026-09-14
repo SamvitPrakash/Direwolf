@@ -1,9 +1,17 @@
-$backgrounds: (
-  background-transparent: rgba(0, 3, 7, 0.6),
-  background-opaque: rgba(0, 3, 7, 0.95),
+$themes: (
+	light: (
+		text: rgb(28, 13, 13),
+		background: rgb(249, 240, 240),
+		primary: rgb(18, 18, 18),
+		secondary: rgb(231, 126, 126),
+		accent: rgb(191, 24, 24),
+	),
+	dark: (
+		text: rgb(242, 227, 227),
+		background: rgb(13, 5, 5),
+		primary: rgb(237, 237, 237),
+		secondary: rgb(129, 25, 25),
+		accent: rgb(231, 63, 63),
+	),
 );
 
-$accents: (
-  accent: rgba(248, 228, 134),
-  accent-transparent: rgba(248, 228, 134, 0.2),
-);

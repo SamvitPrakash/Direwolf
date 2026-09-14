@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use 'colors';
+@use 'common_styling';
+@use 'fonts';
+
+.system-tray-bar {
+    margin-left: 2.5px;
+    // border-bottom-left-radius: 0%;
+    // border-bottom-right-radius: 0%;
+}
+
+.system-tray-menu {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*
+    The fields below are used to style the popup menu of the menubutton, these fields are
+    not used to style the menubutton itself, but rather the popup menu that appears when the
+    menubutton is clicked. These fields are used in the widgets that form the hierarchy of the
+    menubutton and there is no way to set styles to these widgets directly, therefore we have
+    to use the fields below to style the popup menu. These are all the currently known fields 
+    after hours of inspecting the windows and research. The empty fields are left here in order 
+    to refer to them in the future if needing to style the popup menu of a menubutton. 
+*/
+.system-tray-menu popover {}
+
+.system-tray-menu popover contents modelbutton:checked {}
+
+.system-tray-menu popover arrow {
+    background-color: map.get(colors.$themes, light, background);
+}
+
+.system-tray-menu popover contents {
+    background-color: map.get(colors.$themes, light, background);
+    font-family: fonts.$nandinagari;
+    font-size: 12px;
+    font-weight: 550;
+    padding: 0px;
+    margin: 0px;
+}
+
+.system-tray-menu popover contents modelbutton {
+    color: map.get(colors.$themes, light, text);
+    // border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+}
+
+.system-tray-menu popover contents modelbutton:hover {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.system-tray-menu popover contents separator {
+    opacity: 0;
+    padding: 0px;
+    margin: 0px;
+    
+}

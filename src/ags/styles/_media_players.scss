@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use 'colors';
+
+.media-players-modal {
+    background-color: map.get(colors.$themes, light, background);
+    border-radius: 22px;    
+}
+
+.media-players-modal-button {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.media-players-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.media-players-modal-icon {
+    border-radius: 22px;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.media-players-modal-icon:hover{
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}

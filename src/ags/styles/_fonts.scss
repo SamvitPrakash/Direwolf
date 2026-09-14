@@ -1,0 +1,13 @@
+/*
+  Aylurs GTK Shell is not a browser therefore importing fonts through URL's is not possible. If you want to use a font, 
+  please download it and install it on your system. The font links are left below for reference only. You can also use
+  the font manager to install fonts on your system.
+*/
+
+// @import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Nandinagari:700|Noto%20Sans%20Nandinagari:400');
+
+$nandinagari: 'Noto Sans Nandinagari';
+
+.nandinagari {
+  font-family: 'Noto Sans Nandinagari';
+}

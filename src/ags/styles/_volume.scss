@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.volume-modal-box {
+    background-color: map.get(colors.$themes, light, background);
+    border-radius: 22px;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.volume-label {
+    color: map.get(colors.$themes, light, text);
+    font-weight: 800;
+}

@@ -1,0 +1,64 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.messages-bar {
+    padding: 0px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    
+}
+
+.messages-button {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 22px;
+    padding: 1.5px;
+}
+
+.messages-icon {
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.messages-icon:hover {
+    color: map.get(colors.$themes, light, background);
+    background-color: map.get(colors.$themes, light, secondary);
+}
+
+.messages-icon-active {
+    color: map.get(colors.$themes, light, background);
+    background-color: map.get(colors.$themes, light, secondary);
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.messages-icon-alert {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: map.get(colors.$themes, light, background);
+        color: map.get(colors.$themes, light, text);
+    }
+
+    25% {
+        background-color: map.get(colors.$themes, light, secondary);
+        color: map.get(colors.$themes, light, background);
+    }
+
+    50% {
+        background-color: map.get(colors.$themes, light, secondary);
+        color: map.get(colors.$themes, light, background);
+    }
+
+    100% {
+        background-color: map.get(colors.$themes, light, background);
+        color: map.get(colors.$themes, light, text);
+    }
+}

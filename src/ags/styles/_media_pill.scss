@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.media-pill {
+    padding-left: 6px;
+    padding-right: 8px;
+    margin-left:  2.5px;
+    margin-right: 2.5px;
+}
+
+.media-control-button {
+    border-radius: 22px;
+    padding: 0px;
+}
+
+.media-album-cover{
+    border-radius: 22px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.media-icon {
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin: 0px;
+}
+
+.media-icon:hover {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.media-label {
+    color: map.get(colors.$themes, light, text);
+    border-radius: 22px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.media-label:hover{
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.media-pill-button {
+    border-radius: 22px;
+    padding: 0px;
+    margin: 0px;
+}

@@ -36,6 +36,10 @@ ags: clean $(CSS)
 	@echo 'Running Application...'
 	ags run $(AGS_ENTRY) --gtk 4
 
+ags-inspect: clean $(CSS)
+	@echo 'Running Application in Debug Mode...'
+	ags inspect -i 'Direwolf'
+
 ags-live:
 	@echo 'Watching for changes...'
 	nodemon --ext $(EXTENSIONS_AGS)  --exec "make ags || true" -r $(AGS)

@@ -1,0 +1,1 @@
+export type commandHandler = (args?: string[]) => Promise<unknown> | unknown

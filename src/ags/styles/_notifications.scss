@@ -1,0 +1,72 @@
+@use 'sass:map';
+@use 'colors';
+@use 'fonts';
+
+.notifications-box {
+    background-color: map.get(colors.$themes, light, background);
+    padding: 5px;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.notification-header {
+    border-radius: 22px;
+    margin-bottom: 20px;
+    margin-right: 2px;
+}
+
+.notification-title {
+    color: map.get(colors.$themes, light, primary);
+    // background-color: map.get(colors.$themes, light, primary);
+    font-weight: 550;
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+.notification-icon {
+    border-radius: 11px;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.notification-icon:hover{
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.notification-icon-active {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+}
+
+.notification-do-not-disturb {
+    background-color: map.get(colors.$themes, light, secondary);
+    color: map.get(colors.$themes, light, background);
+    border-radius: 11px;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.notification-items-container {
+    color: map.get(colors.$themes, light, background);
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.notification-empty-label {
+    color: rgba(map.get(colors.$themes, light, text),0.5);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+}
