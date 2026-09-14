@@ -4,8 +4,8 @@ import Bar from "./modules/widgets/Bar"
 import MediaPlayers from "./modules/widgets/Media_Players"
 import Notifications from "./modules/widgets/Notifications"
 import AudioDisplay from "./modules/widgets/Audio_Display"
-import NotificationToast from "./modules/widgets/Notification_Toast"
 import CommandRegistry from "./services/command_registry/Command_Registry"
+import ControlPanel from "./modules/widgets/Control_Panel"
 import { registerMediaCommands } from "./command_registrars/media/MediaCommandsRegistrars"
 
 import TrayService from "./services/shared_libraries/TrayService"
@@ -34,7 +34,7 @@ app.start({
 				<MediaPlayers />
 				<Notifications />
 				<AudioDisplay />
-				<NotificationToast />
+				{/* <ControlPanel /> */}
 			</>
 		)
 	},
