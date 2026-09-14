@@ -16,14 +16,14 @@ export default function Bar(){
         >
             <centerbox hexpand class={"bar-content"}>
                 <box $type='start'>
-                    <StartButton/>
+                    {/* <StartButton/> */}
                     <MediaPill/>
                 </box>
 
                 <Workspaces/>
 
                 <box $type='end'>
-                    <Messages/>
+                    {/* <Messages/> */}
                     <Time/>
                     <SystemTray/>
                 </box>
